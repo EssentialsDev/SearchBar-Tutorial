@@ -9,6 +9,8 @@
 import UIKit
 
 class DataCell: UITableViewCell {
+    
+    @IBOutlet weak var label: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +22,9 @@ class DataCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func congigureCell(text: String) {
+        
+        label.text = text
+    }
 }
