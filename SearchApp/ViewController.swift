@@ -88,7 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             inSearchMode = true
             
-            filteredData = data.filter({$0 == searchBar.text})
+            filteredData = data.filter{$0.localizedCaseInsensitiveContains(searchBar.text!)}
             
             tableView.reloadData()
         }
