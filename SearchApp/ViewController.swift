@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var number = 0
+    
     var data = ["dogs", "Cats", "Goofs", "Apples", "Frogs", "Orange"]
     
     var filteredData = [String]()
