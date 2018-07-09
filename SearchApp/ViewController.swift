@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var number = 0
+    
     var data = ["dogs", "Cats", "Goofs", "Apples", "Frogs", "Orange"]
     
     var filteredData = [String]()
@@ -88,7 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             inSearchMode = true
             
-            filteredData = data.filter({$0 == searchBar.text})
+            filteredData = data.filter{$0.localizedCaseInsensitiveContains(searchBar.text!)}
             
             tableView.reloadData()
         }
